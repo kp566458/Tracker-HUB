@@ -1,0 +1,52 @@
+cloudinary:
+  cloud_name: dmo3eeypr
+  api_key: 745275823126759
+  api_secret: IYvfuHkIWOE7d2yQNHl37tZRaQM
+
+
+spring:
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          timeout: '5000'
+          auth: 'true'
+          connectiontimeout: '5000'
+          writetimeout: '5000'
+    host: smtp.gmail.com
+    username: shravanit950@gmail.com
+    password: fnwrynhbatztaody
+    port: '587'
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+spring.data.mongodb:
+  database: Tracker_Hub # Database name.
+  uri: mongodb+srv://Tracker_Hub:E9xJHdUVmRrmw3B3@tracker-hub.v6odbn0.mongodb.net/?retryWrites=true&w=majority # Mongo database URI. Cannot be set with host, port and credentials.
+
+server:
+  port: 9092
+
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAWT35WVPUGGJFVTUF
+      secret-key: 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
+    region:
+      static: US East (N. Virginia) us-east-1
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: trackerhub
+
+
+
