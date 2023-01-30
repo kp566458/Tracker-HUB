@@ -61,36 +61,6 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 	}
 
-	@PatchMapping("/update/{email}")
-	public ResponseEntity<?> updateUser(@PathVariable("email") String email, @RequestBody Map<String, Object> fields)
-			throws IOException {
-		User userDetails = userRepository.findUserByEmail(email);
-		if (userDetails == null) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND)
-					.body(new CustomResponseEntity("User Not Found on This Id - " + email, "NOT_FOUND"));
-		}
-
-		if (userDetails != null) {
-			fields.forEach((key, value) -> {
-				java.lang.reflect.Field field = ReflectionUtils.findField(User.class, key); // find field in the object
-																							// class
-				field.setAccessible(true);
-				ReflectionUtils.setField(field, userDetails, value);
-			});
-			 User updatedUser = userRepository.save(userDetails);
-			if (updatedUser == null) {
-				return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-						.body(new CustomResponseEntity("Goal Not Updated", "Bad_Request"));
-			}
-			if (updatedUser != null) {
-				return ResponseEntity.ok("updated successfully");
-			}
-		}
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-				.body(new CustomResponseEntity("Goal Not Updated", "Bad_Request"));
-
-	}
-
 	@PostMapping("/login")
 	public ResponseEntity<?> userLogin(@RequestBody Login login) {
 		User user = userRepository.findUserByEmail(login.getEmail());
@@ -104,48 +74,6 @@ public class UserController {
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("EMail / Password are Invalid");
 		}
-	}
-	@GetMapping("/{email}")
-	public ResponseEntity<?> userDetails(@PathVariable("email") String email) {
-		User user = userRepository.findUserByEmail(email);
-		if (user == (null)) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Not Found");
-		}
-		if (user != null) {
-			return ResponseEntity.status(HttpStatus.OK).body(user);
-		}
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("SomeThing went wrong");
-	}
-
-	@GetMapping("/professors")
-	public ResponseEntity<?> getAllCouseId() {
-		Query query = new Query();
-		query.addCriteria(Criteria.where("role").is("Professor"));
-		Field include = query.fields().include("email").include("username").include("role");
-		List<User> list = mongoTemplate.find(query, User.class);
-
-		if (list.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No Professor Found.");
-		}
-
-		if (list != null) {
-			return ResponseEntity.ok(list);
-		}
-
-		return ResponseEntity.status(HttpStatus.ACCEPTED).body("Evalauting Data.");
-
-	}
-
-	@PutMapping("change/password")
-	public ResponseEntity<?> changePassword(@RequestBody Map<String, Object> requestBody) {
-		String email = (String) requestBody.get("email");
-		Query query = new Query(Criteria.where("email").is(email));
-		String password = (String) requestBody.get("password");
-		String salt = HashingPasswordGenerator.getSlat(30);
-		String mySecuredPassword = HashingPasswordGenerator.generatingSecurePassword(password, salt);
-		Update update = new Update().set("password", mySecuredPassword).set("salt", salt);
-		 UpdateResult result = mongoTemplate.updateMulti(query, update, User.class);
-		return ResponseEntity.status(HttpStatus.OK).body("Password Saved Successfully.");
 	}
 
 }
