@@ -1,0 +1,29 @@
+.link_title_header {
+    width: 100%;
+    display: flex;
+    background-color: black !important;
+    color: azure !important;
+}
+
+.quickLink {
+    display: flex;
+    align-items: center;
+}
+
+.list_link {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  .list_item_link:hover {
+    background-color: black !important;
+  }
+
+  .list_item_link:hover > .list_item_icon,
+  .list_item_link:hover > .list_link {
+      color: #ffffff !important;
+  }
+  
+  .list_link:hover {
+      color: #ffffff !important;
+  }

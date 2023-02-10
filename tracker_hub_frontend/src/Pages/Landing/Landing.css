@@ -1,0 +1,8 @@
+.sectionLeft {
+    align-items: "center" !important;
+    display: "grid" !important;
+    padding: "50px" !important;
+    background: '#fff' !important;
+    border-radius: '50%' !important;
+
+}

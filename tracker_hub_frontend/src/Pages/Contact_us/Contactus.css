@@ -1,0 +1,40 @@
+.ContactUs_Main_Container {
+    display: flex;
+    max-height: 800vh;
+    height: 700px;
+  }
+
+  .ContactUs_Right_MainContainer {
+      background-color: black;
+      border-radius: 8px;
+  }
+  .Contactus_InputForm_Fields{
+    width: 90%;
+    background-color: white;
+    margin: 25px 25px;
+    border-radius: 5px;
+  }
+
+  .FormInput_Fields4Contact{
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .textArea_Input {
+      height: 70px !important;
+      font-family: 'Courier New', Courier, monospace !important;
+  }
+
+  .Contactus_Icons{
+      background-color: black;
+      color: aliceblue;
+      justify-content: center;
+      border-radius: 5px;
+  }
+.Contactus_leftGrid{
+    margin-top: 10px;
+}
+
+.Contactus_rightGrid{
+    padding-left: 15px;
+}
