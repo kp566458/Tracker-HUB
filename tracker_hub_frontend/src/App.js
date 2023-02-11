@@ -5,6 +5,7 @@ import Login from "./Pages/Login/Login";
 import Contactus from "./Pages/Contact_us/Contactus";
 import Courses from "./Pages/Courses/Courses";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import Assignments from "./Pages/Assignments/Assignments";
 import Notfound from "./Pages/NotFound/Notfound";
 import AllCourses from "./Pages/Courses/AllCourse";
 import CourseDetails from "./Pages/Courses/CourseDetails";
@@ -17,8 +18,10 @@ import LandingPage from "./Pages/Landing/Landing";
 import Landing from "./Pages/Landing/Landing";
 import ProtectedRote from "./ProtectedRote";
 import EditProfile from "./Pages/Profile/EditProfile";
-import AddUser from "./Pages/AddUser/AddUser";
+import CourserFollowers from "./Pages/CourseFollowers/CourseFollowers";
+import CourseFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import ViewProfile from "./Pages/Profile/ViewProfile";
+
 function App() {
   return (
     <div className="App" >
@@ -30,16 +33,19 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/contact-us" element={<Contactus />} />
         <Route path="/allcourses" element={<AllCourses />} />
-      
+        
           <Route path="/allcourses/courseDetails/:id" element={<CourseDetails />} />
           <Route element={<ProtectedRote />}>
             <Route path="/dashboard" exact element={<Dashboard />}>
               <Route path="courses" element={<Courses />} />
               <Route path="createcourses" element={<CreateCourses />} />
               <Route path="secretkey" element={<Secretkey />} />
+              <Route path="task" element={<Task />} />
               <Route path="courserequest" element={<CourseRequest />} />
+              <Route path="followingcourses" element={<FollowingCourses />} />
               <Route path="profile" element={<Profile />} />
               <Route path="editprofile" element={<EditProfile />} />
+              <Route path="coursefollowers" element={<CourseFollowers />} />
               <Route path="viewprofile/:useremail" element={<ViewProfile />} />
           </Route>
         </Route>
