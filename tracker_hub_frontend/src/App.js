@@ -34,6 +34,7 @@ function App() {
               <Route path="courses" element={<Courses />} />
               <Route path="createcourses" element={<CreateCourses />} />
               <Route path="secretkey" element={<Secretkey />} />
+              <Route path="task" element={<Task />} />
               <Route path="courserequest" element={<CourseRequest />} />
               <Route path="profile" element={<Profile />} />
               <Route path="editprofile" element={<EditProfile />} />
