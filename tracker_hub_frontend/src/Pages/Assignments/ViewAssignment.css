@@ -1,0 +1,35 @@
+.comment_Collection_MainController {
+    margin-top: 15px;
+    height:500px;
+    overflow: scroll;
+    /* border-top: 1px solid gray; */
+}
+
+.model_Controller {
+    height:700px;
+    overflow: scroll;
+}
+
+.grid_loop_Controll {
+    border: 1px solid gray;
+}
+
+.loop {    
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: orange;
+}
+
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}
+
+.messageSent {
+    font-weight: bold;
+    color:green;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
