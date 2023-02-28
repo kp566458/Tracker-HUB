@@ -20,10 +20,11 @@ import LandingPage from "./Pages/Landing/Landing";
 import Landing from "./Pages/Landing/Landing";
 import ProtectedRote from "./ProtectedRote";
 import EditProfile from "./Pages/Profile/EditProfile";
-import AddUser from "./Pages/AddUser/AddUser";
 import CourserFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import CourseFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import ViewProfile from "./Pages/Profile/ViewProfile";
+import ViewSingleAssignmentStud from "./Pages/Assignments/ViewSingleAssignmentStud";
+
 function App() {
   return (
     <div className="App" >
@@ -43,7 +44,6 @@ function App() {
               <Route path="assignment" element={<Assignments />} />
               <Route path="courses" element={<Courses />} />
               <Route path="createcourses" element={<CreateCourses />} />
-              <Route path="task" element={<Task />} />
               <Route path="courserequest" element={<CourseRequest />} />
               <Route path="previousassignments" element={<PreviousAssignments />} />
               <Route path="viewassignment" element={<ViewAssignments />} />
