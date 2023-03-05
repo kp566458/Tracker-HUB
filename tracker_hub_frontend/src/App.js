@@ -10,6 +10,7 @@ import Notfound from "./Pages/NotFound/Notfound";
 import AllCourses from "./Pages/Courses/AllCourse";
 import CourseDetails from "./Pages/Courses/CourseDetails";
 import CreateCourses from "./Pages/Courses/CreateCourses";
+import Secretkey from "./Pages/Secretavalut/Secretkey";
 import Task from "./Pages/Task/Task";
 import CourseRequest from "./Pages/CourseRequest/CourseRequest";
 import PreviousAssignments from "./Pages/Assignments/PreviousAssignments";
@@ -23,7 +24,6 @@ import EditProfile from "./Pages/Profile/EditProfile";
 import CourserFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import CourseFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import ViewProfile from "./Pages/Profile/ViewProfile";
-import ViewSingleAssignmentStud from "./Pages/Assignments/ViewSingleAssignmentStud";
 
 function App() {
   return (
@@ -44,13 +44,14 @@ function App() {
               <Route path="assignment" element={<Assignments />} />
               <Route path="courses" element={<Courses />} />
               <Route path="createcourses" element={<CreateCourses />} />
+              <Route path="secretkey" element={<Secretkey />} />
+              <Route path="task" element={<Task />} />
               <Route path="courserequest" element={<CourseRequest />} />
               <Route path="previousassignments" element={<PreviousAssignments />} />
               <Route path="viewassignment" element={<ViewAssignments />} />
               <Route path="followingcourses" element={<FollowingCourses />} />
               <Route path="profile" element={<Profile />} />
               <Route path="editprofile" element={<EditProfile />} />
-              <Route path="adduser" element={<AddUser />} />
               <Route path="coursefollowers" element={<CourseFollowers />} />
               <Route path="viewprofile/:useremail" element={<ViewProfile />} />
           </Route>
