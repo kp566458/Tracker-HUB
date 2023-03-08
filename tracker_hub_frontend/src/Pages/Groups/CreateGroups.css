@@ -1,0 +1,7 @@
+.creatGroupForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 7;
+}
