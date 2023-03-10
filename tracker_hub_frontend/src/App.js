@@ -15,15 +15,29 @@ import Task from "./Pages/Task/Task";
 import CourseRequest from "./Pages/CourseRequest/CourseRequest";
 import PreviousAssignments from "./Pages/Assignments/PreviousAssignments";
 import ViewAssignments from "./Pages/Assignments/ViewAssignments";
+import SubmittedAssignments from "./Pages/Assignments/SubmittedAssignments";
 import FollowingCourses from "./Pages/Courses/FollowingCourses";
 import Profile from "./Pages/Profile/Profile";
 import LandingPage from "./Pages/Landing/Landing";
 import Landing from "./Pages/Landing/Landing";
 import ProtectedRote from "./ProtectedRote";
 import EditProfile from "./Pages/Profile/EditProfile";
+import AddUser from "./Pages/AddUser/AddUser";
 import CourserFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import CourseFollowers from "./Pages/CourseFollowers/CourseFollowers";
 import ViewProfile from "./Pages/Profile/ViewProfile";
+import ViewSingleAssignment from "./Pages/Assignments/ViewSingleAssignment";
+import ViewSingleAssignmentStud from "./Pages/Assignments/ViewSingleAssignmentStud";
+import SubmittedAssignmentStud from "./Pages/Assignments/SubmittedAssignmentStud";
+import AddProfessor from "./Pages/AddUser/AddProfessor";
+import Graph from "./Pages/Graph/Graph";
+import StudentGrade from "./Pages/StudentGrade/StudentGrade";
+import CreateGroup from "./Pages/Groups/CreateGroup";
+import Groups from "./Pages/Groups/Groups";
+import Group from "./Pages/Groups/Group";
+import GroupD from "./Pages/Groups/GroupD";
+import ViewSingleSubmittedAssignmentStud from "./Pages/Assignments/ViewSingleSubmittedAssignmentStud";
+import ViewSingleSubmitAssignment from "./Pages/Assignments/ViewSingleSubmitAssignment";
 
 function App() {
   return (
@@ -49,11 +63,25 @@ function App() {
               <Route path="courserequest" element={<CourseRequest />} />
               <Route path="previousassignments" element={<PreviousAssignments />} />
               <Route path="viewassignment" element={<ViewAssignments />} />
+              <Route path="submittedassignments" element={<SubmittedAssignments />} />
               <Route path="followingcourses" element={<FollowingCourses />} />
               <Route path="profile" element={<Profile />} />
               <Route path="editprofile" element={<EditProfile />} />
+              <Route path="adduser" element={<AddUser />} />
               <Route path="coursefollowers" element={<CourseFollowers />} />
               <Route path="viewprofile/:useremail" element={<ViewProfile />} />
+              <Route path="view_assignment/:id" element={<ViewSingleAssignment />} />
+              <Route path="view_submit_assignment/:id" element={<ViewSingleSubmitAssignment />} />
+              <Route path="view_assignment_stud/:id" element={<ViewSingleAssignmentStud />} />
+              <Route path="view_submit_assignment_stud/:id" element={<ViewSingleSubmittedAssignmentStud />} />
+              <Route path="submittedassignmentstud" element={<SubmittedAssignmentStud />} />
+              <Route path="addprofessor" element={<AddProfessor />} />
+              <Route path="graph" element={<Graph />} />
+              <Route path="studentgrades" element={<StudentGrade />} />
+              <Route path="creategroup" element={<CreateGroup />} />
+              <Route path="groups" element={<Groups />} />
+              <Route path="group/:id" element={<Group />} />
+              <Route path="groupd/:id" element={<GroupD />} />
           </Route>
         </Route>
         <Route path="*"  element={<Notfound />}/>
