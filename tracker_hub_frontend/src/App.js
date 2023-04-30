@@ -11,6 +11,7 @@ import AllCourses from "./Pages/Courses/AllCourse";
 import CourseDetails from "./Pages/Courses/CourseDetails";
 import CreateCourses from "./Pages/Courses/CreateCourses";
 import Secretkey from "./Pages/Secretavalut/Secretkey";
+import Task from "./Pages/Task/Task";
 import CourseRequest from "./Pages/CourseRequest/CourseRequest";
 import FollowingCourses from "./Pages/Courses/FollowingCourses";
 import Profile from "./Pages/Profile/Profile";
@@ -34,9 +35,11 @@ function App() {
         <Route path="/contact-us" element={<Contactus />} />
         <Route path="/allcourses" element={<AllCourses />} />
         
+          <Route path="/assignment" element={<Assignments />} />
           <Route path="/allcourses/courseDetails/:id" element={<CourseDetails />} />
           <Route element={<ProtectedRote />}>
             <Route path="/dashboard" exact element={<Dashboard />}>
+              <Route path="assignment" element={<Assignments />} />
               <Route path="courses" element={<Courses />} />
               <Route path="createcourses" element={<CreateCourses />} />
               <Route path="secretkey" element={<Secretkey />} />
@@ -45,6 +48,7 @@ function App() {
               <Route path="followingcourses" element={<FollowingCourses />} />
               <Route path="profile" element={<Profile />} />
               <Route path="editprofile" element={<EditProfile />} />
+              <Route path="adduser" element={<AddUser />} />
               <Route path="coursefollowers" element={<CourseFollowers />} />
               <Route path="viewprofile/:useremail" element={<ViewProfile />} />
           </Route>
