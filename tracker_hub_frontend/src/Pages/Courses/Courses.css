@@ -1,0 +1,52 @@
+.follow_btn {
+    background-color: black !important;
+    color: #fff !important;
+}
+
+.follow_left {
+    margin-right: 7px !important;
+}
+
+.follow_right {
+    margin-right: 7px !important;
+    margin-left: 7px !important;
+}
+
+.course_Title {
+    width: 160px;
+}
+
+.courseDetailsInfo {
+    font-weight: 300 !important;
+}
+
+.CreateCourse_GridContainer {
+    margin-top: 15px !important;
+}
+
+.courseFormInput {
+    margin-top: 15px !important;
+}
+
+.course_submit_button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.previewImage {
+    height: 180px;
+    width: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.89) !important;
+    padding: 5px;
+}
+
+.cusom_Divider {
+    height: 1px;
+    width: 100%;
+    background-color:  gray;
+}
+
+.NotGranted {
+    cursor: not-allowed !important;
+    background-color:  gray !important;
+}
