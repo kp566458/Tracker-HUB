@@ -6,11 +6,11 @@ Project Name: Tracker HUB
 
 Team Members : 
 
-Kavya Patlolla
-Naveen Kumar Kalyanam
-Sphoorthy Akurathi
-Vishnu Priya Kunapareddy
-Sireesha Bondalapatti
+Kavya Patlolla,
+Naveen Kumar Kalyanam,
+Sphoorthy Akurathi,
+Vishnu Priya Kunapareddy,
+Sireesha Bondalapatti,
 Sujitha Chittiprolu
 
 
